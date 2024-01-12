@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './calendar.module.css'
 
-function Calendar(props) {
+function Calendars(props) {
 
   const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]
 
@@ -9,10 +9,12 @@ function Calendar(props) {
 
   const weekDayNames = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
+  const [monthNamesState, setMonthNamesState] = useState(``)
 
 
-
-
+  const changeMonth = (name) => {
+    setMonthNamesState(name)
+  }
 
   return (
     <div className={s.calendar}>
@@ -21,8 +23,8 @@ function Calendar(props) {
         <button >{`<`}</button>
 
 
-        <select>{
-          monthNames.map((name, i) => (<option key={i} > {name}</option>))
+        <select value={monthNamesState}>{
+          monthNames.map((name, i) => (<option key={i} onClick={() => changeMonth(name)} > {name}</option>))
         }
 
         </select>
@@ -60,4 +62,4 @@ function Calendar(props) {
   );
 }
 
-export default Calendar;
+export default Calendars;

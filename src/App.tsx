@@ -2,6 +2,7 @@ import 'react-calendar/dist/Calendar.css';
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import DayEvent from './components/DayEvent.tsx';
+import Test from './components/test.jsx';
 
 
 type ValuePiece = Date | null;
@@ -11,7 +12,7 @@ type Value = ValuePiece | [ValuePiece, ValuePiece];
 function MyApp() {
   const [value, onChange] = useState < Value > (new Date());
 
-  const [eve,setEve] = useState(``)
+  const [eve,setEve] = useState('')
 
 
  
@@ -21,6 +22,8 @@ function MyApp() {
       <Calendar locale='Tyumen' onClickDay={(i)=>setEve(`${i}`)} onChange={onChange} value={value} />
        <DayEvent eve={eve} />
 
+
+      
     </>
   );
 }

@@ -18,9 +18,10 @@ const yearZ = splitData[3]
 
     <div>
       <div>
-        <h1>{dayMothYear}</h1>
+        <h1>{(!!props.eve) ? dayMothYear : ''}</h1>
         
-       
+       <input type='number' />:
+       <input type='number' />
       </div>
       
       

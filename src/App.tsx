@@ -15,11 +15,11 @@ function MyApp() {
   const [eve,setEve] = useState('')
 
 
-  useEffect(()=>{
-    const x = new Date()
-    setEve(`${x}`)
+  // useEffect(()=>{
+  //   const x = new Date()
+  //   setEve(`${x}`)
 
-  },[])
+  // },[])
  
 
   return (

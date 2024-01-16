@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function DayEvent(props) {
 
@@ -13,6 +13,13 @@ const monthZ = splitData[2]
 
 const yearZ = splitData[3]
 
+
+
+const [pickTime , setTime] = useState('20:00')
+
+
+
+
   return (
 
 
@@ -20,8 +27,8 @@ const yearZ = splitData[3]
       <div>
         <h1>{(!!props.eve) ? dayMothYear : ''}</h1>
         
-       <input type='number' />:
-       <input type='number' />
+       <input type='time' value={pickTime}  onChange={(e)=>setTime(e.target.value)} />
+       
       </div>
       
       

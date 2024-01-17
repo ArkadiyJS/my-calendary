@@ -60,7 +60,7 @@ const handleSubmit = (e)=>{
       </div>
 
       <div>
-        <button type='submit'>создать событие</button>
+        <button type='submit' disabled={eventName === ''} >создать событие</button>
       </div>
             
       

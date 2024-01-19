@@ -14,6 +14,8 @@ function MyApp() {
 
   const [eve,setEve] = useState('')
 
+  const [showInputFormEventDay,setShowInputFormEventDay] = useState(false)
+
 
   // useEffect(()=>{
   //   const x = new Date()
@@ -25,7 +27,10 @@ function MyApp() {
   return (
     <>
       <Calendar  onClickDay={(i)=>setEve(`${i}`)} onChange={onChange} value={value} />
-       <DayEvent eve={eve} />
+
+      <button onClick={()=>{setShowInputFormEventDay(!showInputFormEventDay)}}>Добавить событие на этот день./скрыть</button>
+
+      {!!showInputFormEventDay ?<DayEvent eve={eve} /> : ''} 
 
 
       

@@ -35,7 +35,9 @@ const handleSubmit = (e)=>{
         time:pickTime,
         textEvent:eventName,
       }
+
        console.log(newEventDay)
+       setEventName('')
     }
     
 }
